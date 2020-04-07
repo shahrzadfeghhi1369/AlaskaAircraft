@@ -1,0 +1,64 @@
+﻿@model AlaskaAircraft.Models.Aircraft
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Aircraft</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Tail_Number" class="control-label"></label>
+                <input asp-for="Tail_Number" class="form-control" />
+                <span asp-validation-for="Tail_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LRU_Name" class="control-label"></label>
+                <input asp-for="LRU_Name" class="form-control" />
+                <span asp-validation-for="LRU_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LRU_Part_Number" class="control-label"></label>
+                <input asp-for="LRU_Part_Number" class="form-control" />
+                <span asp-validation-for="LRU_Part_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Software_Name" class="control-label"></label>
+                <input asp-for="Software_Name" class="form-control" />
+                <span asp-validation-for="Software_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Software_Part_Number" class="control-label"></label>
+                <input asp-for="Software_Part_Number" class="form-control" />
+                <span asp-validation-for="Software_Part_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EC_Number" class="control-label"></label>
+                <input asp-for="EC_Number" class="form-control" />
+                <span asp-validation-for="EC_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pre_Post_Condition" class="control-label"></label>
+                <input asp-for="Pre_Post_Condition" class="form-control" />
+                <span asp-validation-for="Pre_Post_Condition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
